@@ -15,7 +15,8 @@ The DAISY PoC consists of:
 
 
 ### Architecture Diagram
-![DAISY Architecture](./docs/daisy-architecture.png)
+![DAISY Architecture](https://raw.githubusercontent.com/ramagumilar/daisy-poc/main/docs/daisy-architecture.png)
+
 
 
 ## Features
