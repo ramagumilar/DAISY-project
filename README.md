@@ -29,7 +29,7 @@ Main components of DAISY:
 
 ### 🖼️ Architecture Diagram
 
-DAISY Architecture <img width="1536" height="1024" alt="daisy" src="https://github.com/user-attachments/assets/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" />
+DAISY Architecture <img width="1536" height="1024" alt="daisy" src="https://github.com/user-attachments/assets/a1763b9a-069b-4c20-925b-7fc14d1c4bba" />
 
 
 ---
