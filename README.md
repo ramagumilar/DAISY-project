@@ -15,7 +15,8 @@ The DAISY PoC consists of:
 
 
 ### Architecture Diagram
-![DAISY Architecture](https://raw.githubusercontent.com/ramagumilar/daisy-poc/main/docs/daisy-architecture.png)
+![DAISY Architecture].<img width="1536" height="1024" alt="daisy" src="https://github.com/user-attachments/assets/e8e59abf-8c19-4e7d-91e6-ef440a250d2c" />
+
 
 
 
@@ -37,6 +38,7 @@ The DAISY PoC consists of:
 ## Usage
 - Connect wallet.
 - Register a new schema.
+
 - Verify identities.
 - Submit Blob ID manually or via backend automation.
 
