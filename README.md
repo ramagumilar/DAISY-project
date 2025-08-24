@@ -42,7 +42,7 @@ The DAISY PoC consists of:
 
 ## Collaboration & Permissions
 For any collaboration inquiries or permission to contribute/edit this project, please contact:
-**yourname@example.com**
+**ramagumilar9@gmail.com*
 
 
 Unauthorized copying or imitation of this project is prohibited.
