@@ -15,7 +15,7 @@ The DAISY PoC consists of:
 
 
 ### Architecture Diagram
-![DAISY Architecture].<img width="1536" height="1024" alt="daisy" src="https://github.com/user-attachments/assets/e8e59abf-8c19-4e7d-91e6-ef440a250d2c" />
+DAISY Architecture.<img width="1536" height="1024" alt="daisy" src="https://github.com/user-attachments/assets/e8e59abf-8c19-4e7d-91e6-ef440a250d2c" />
 
 
 
