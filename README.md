@@ -1,54 +1,98 @@
-# DAISY (Decentralized Authentication Identity System) - Proof of Concept
+# DAISY – Decentralized Authentication & Identity System
 
-
-## Overview
-DAISY is a decentralized authentication and identity verification system built on blockchain. It allows users to register schemas, verify identities, and submit proofs (Blob IDs) integrated with the Soundness Layer.
-
-
-## Architecture
-The DAISY PoC consists of:
-- **Frontend (React):** User interface for schema registration, verification, and proof submission.
-- **Smart Contracts:** On-chain registry and verifier contracts.
-- **Soundness Layer Integration:** For proof verification.
-- **Optional Backend:** Automates Blob ID submission.
-- **Decentralized Storage (e.g., IPFS):** For storing proof data.
-
-
-### Architecture Diagram
-DAISY Architecture.<img width="1536" height="1024" alt="daisy" src="https://github.com/user-attachments/assets/e8e59abf-8c19-4e7d-91e6-ef440a250d2c" />
-
-
-
-
-## Features
-- Register and manage schemas on-chain.
-- Verify user identities via smart contracts.
-- Submit and verify proofs (Blob IDs) with Soundness Layer.
-- Decentralized storage support.
-
-
-## Installation
-1. Clone the repository.
-2. Install dependencies: `npm install`
-3. Start local blockchain (Hardhat): `npx hardhat node`
-4. Deploy contracts: `npx hardhat run scripts/deploy.js --network localhost`
-5. Run frontend: `npm start`
-
-
-## Usage
-- Connect wallet.
-- Register a new schema.
-
-- Verify identities.
-- Submit Blob ID manually or via backend automation.
-
-
-## Collaboration & Permissions
-For any collaboration inquiries or permission to contribute/edit this project, please contact:
-**ramagumilar9@gmail.com*
-
-
-Unauthorized copying or imitation of this project is prohibited.
-
+**DAISY** is a decentralized system for **schema registration, identity verification, and proof submission (Blob IDs)** built on **blockchain**.  
+This version includes **Biometric KYC** (face/fingerprint) and **Soundness Layer** integration for secure and privacy-preserving cryptographic verification.
 
 ---
+
+## 🏛️ Architecture
+
+Main components of DAISY:
+
+- **Frontend (React)**  
+  User interface for schema registration, biometric capture, identity verification, and proof submission.
+
+- **Smart Contracts (Solidity)**  
+  Store schemas, biometric hashes, and provide on-chain verification functions.
+
+- **Soundness Layer**  
+  Zero-knowledge proof layer for validating biometric verification and Blob IDs.
+
+- **Decentralized Storage (IPFS / Walrus Protocol)**  
+  Stores encrypted proofs or biometric templates; never raw biometric data.  
+  Walrus provides high-availability decentralized storage.
+
+- **Optional Backend**  
+  Automates Blob ID submission and may assist with biometric feature extraction.
+
+---
+
+### 🖼️ Architecture Diagram
+
+DAISY Architecture (docs/images/daisy-architecture.png)
+
+---
+
+## ✨ Features
+
+- Register & manage **schemas** on-chain.  
+- Verify identities through smart contracts.  
+- **Submit & verify Blob IDs** via the Soundness Layer.  
+- Support for **decentralized storage** (IPFS/Walrus Protocol).  
+- **Biometric KYC**:
+  - Enroll biometric data (face/fingerprint → hash).  
+  - Verify biometric data via on-chain hash matching.  
+  - Integrate proof verification with zk-proofs for privacy.  
+- **Privacy-preserving**: no raw biometric data is stored.
+
+---
+
+## ⚡ Workflow
+
+### 1. Enrollment
+- User captures biometric data (face/fingerprint) via the frontend.  
+- Data → processed into a **biometric hash**.  
+- Hash stored in the smart contract.  
+
+### 2. Verification
+- User performs biometric scan again.  
+- Frontend → sends new hash to the Soundness Layer.  
+- Soundness Layer:  
+  - Compares hash with the registered on-chain value.  
+  - Generates a **zk-proof** to prove validity.  
+
+### 3. Proof Submission
+- The zk-proof is packaged as a **Blob ID**.  
+- Blob ID submitted and verified on-chain.  
+- Final result recorded in the blockchain.  
+
+---
+
+## 📦 Installation
+
+```bash
+git clone https://github.com/ramagumilar/DAISY-project.git
+cd DAISY-project
+npm install
+npx hardhat node
+npx hardhat run scripts/deploy.js --network localhost
+npm start
+
+
+
+
+🔐 Privacy & Security Notes
+
+- No raw biometric data is stored, only hashed or encrypted templates.
+- Use encryption (AES/RSA) when storing biometric templates in IPFS/Walrus.
+- Soundness Layer + zk-proofs ensure privacy-preserving verification.
+- Recommended: liveness detection to prevent spoofing attacks.
+
+📚 Tech Stack
+
+- React – Frontend UI.
+- Hardhat – Smart contract development & local blockchain.
+- Solidity – Smart contracts for schema, biometric, verification.
+- IPFS / Walrus Protocol – Decentralized encrypted proof storage.
+- face-api.js / WebAuthn – Biometric capture (face/fingerprint).
+- circom / snarkjs – Zero-Knowledge Proof for biometrics.
