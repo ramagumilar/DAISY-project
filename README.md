@@ -69,19 +69,6 @@ DAISY Architecture <img width="1536" height="1024" alt="daisy" src="https://gith
 
 ---
 
-## 📦 Installation
-
-```bash
-git clone https://github.com/ramagumilar/DAISY-project.git
-cd DAISY-project
-npm install
-npx hardhat node
-npx hardhat run scripts/deploy.js --network localhost
-npm start
-
-
-
-
 🔐 Privacy & Security Notes
 
 - No raw biometric data is stored, only hashed or encrypted templates.
@@ -97,3 +84,20 @@ npm start
 - IPFS / Walrus Protocol – Decentralized encrypted proof storage.
 - face-api.js / WebAuthn – Biometric capture (face/fingerprint).
 - circom / snarkjs – Zero-Knowledge Proof for biometrics.
+
+
+
+
+## 📦 Installation
+
+```bash
+git clone https://github.com/ramagumilar/DAISY-project.git
+cd DAISY-project
+npm install
+npx hardhat node
+npx hardhat run scripts/deploy.js --network localhost
+npm start
+
+
+
+
